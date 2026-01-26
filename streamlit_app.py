@@ -1,5 +1,5 @@
 import streamlit as st
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup 
 import pandas as pd
 import requests
 
@@ -12,9 +12,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# -------------------------------------------------
-# Premium Dark UI (NO white boxes)
-# -------------------------------------------------
 st.markdown("""
 <style>
 .hero {
@@ -63,9 +60,6 @@ a:hover {
 </div>
 """, unsafe_allow_html=True)
 
-# -------------------------------------------------
-# Scraping Function
-# -------------------------------------------------
 @st.cache_data(show_spinner=True)
 def load_data():
     headers = {
