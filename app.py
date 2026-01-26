@@ -74,7 +74,7 @@ def load_data():
 
     url = "https://www.propertyfinder.ae/en/search?c=2&fu=0&rp=y&ob=mr"
     response = requests.get(url, headers=headers)
-    soup = BeautifulSoup(response.text, "html.parser")
+    soup = BeautifulSoup(response.text, "lxml")
 
     cards = soup.find_all("li", {"role": "listitem"})
 
